@@ -492,7 +492,7 @@
             const username = localStorage.getItem('username');
             
             if (!isLoggedIn || isLoggedIn !== 'true') {
-                // If not logged in, redirect to login page
+                // If not logged in, redirect to login page (index.html)
                 window.location.href = 'index.html';
                 return;
             }
@@ -511,9 +511,9 @@
                 localStorage.removeItem('isLoggedIn');
                 localStorage.removeItem('username');
                 
-                // Redirect to login page after a delay
+                // Redirect to login page (index.html) after a delay
                 setTimeout(() => {
-                    window.location.href = 'login-form.html';
+                    window.location.href = 'index.html';
                 }, 1000);
             });
             
@@ -549,4 +549,3 @@
     </script>
 </body>
 </html>
-
